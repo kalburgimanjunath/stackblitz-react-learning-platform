@@ -80,6 +80,9 @@ function SocialShare() {
             <div>
               <input type="" onChange={(e) => SetDescription(e.target.value)} />
             </div>
+            {/* <Slate editor={editor} initialValue={initialValue}>
+              <Editable />
+            </Slate> */}
           </div>
           <div>
             <div>

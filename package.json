@@ -11,7 +11,8 @@
     "react-dom": "18.2.0",
     "react-router": "6.14.2",
     "react-router-dom": "6.14.2",
-    "slate": "^0.94.1"
+    "slate": "0.94.1",
+    "slate-react": "^0.97.2"
   },
   "scripts": {
     "start": "react-scripts start",
