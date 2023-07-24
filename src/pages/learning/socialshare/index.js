@@ -12,7 +12,13 @@ const PostCard = ({ data }) => {
       <div>
         <div>
           <div>
-            <img src={data.image} />
+            <img
+              src={
+                data.image
+                  ? data.image
+                  : 'https://picsum.photos/seed/picsum/200/300'
+              }
+            />
           </div>
           <div>
             <h5>{data.title}</h5>
@@ -78,7 +84,11 @@ function SocialShare() {
           <div>
             <div>Tags</div>
             <div>
-              <input type="text" onChange={(e) => SetTags(e.target.value)} />
+              <input
+                type="text"
+                onChange={(e) => SetTags(e.target.value)}
+                value={['posts', 'description']}
+              />
             </div>
           </div>
           <div className="button-footer">
