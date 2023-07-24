@@ -26,3 +26,12 @@ body {
   padding: 10px 10px;
   margin: 10px 0;
 }
+.post-card {
+  display: flex;
+}
+.post-card .post-container {
+  display: flex;
+}
+.p-20 {
+  padding: 20px;
+}

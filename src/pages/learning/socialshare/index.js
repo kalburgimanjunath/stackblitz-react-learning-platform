@@ -8,29 +8,27 @@ function index() {
 }
 const PostCard = ({ data }) => {
   return (
-    <div>
-      <div>
-        <div>
-          <div>
-            <img
-              src={
-                data.image
-                  ? data.image
-                  : 'https://picsum.photos/seed/picsum/200/300'
-              }
-            />
-          </div>
-          <div>
-            <h5>{data.title}</h5>
-            <div>{data.description}</div>
-          </div>
+    <div className="post-card">
+      <div className="post-container">
+        <div className="post-image">
+          <img
+            src={
+              data.image
+                ? data.image
+                : 'https://picsum.photos/seed/picsum/200/300'
+            }
+          />
         </div>
-        <div>
-          {data.tags &&
-            data.tags.map((item) => {
-              return <span>{item}</span>;
-            })}
+        <div className="post-desc p-20">
+          <h5>{data.title}</h5>
+          <div>{data.description}</div>
         </div>
+      </div>
+      <div className="post-tags">
+        {data.tags &&
+          data.tags.map((item) => {
+            return <span>{item}</span>;
+          })}
       </div>
     </div>
   );
