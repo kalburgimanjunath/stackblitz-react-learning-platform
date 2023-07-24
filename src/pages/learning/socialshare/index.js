@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 function index() {
   return (
     <div>
@@ -9,10 +9,16 @@ function index() {
 const PostCard = ({ data }) => {
   return (
     <div>
-      <div></div>
       <div>
-        <div>{data.title}</div>
-        <div>{data.description}</div>
+        <div>
+          <div>
+            <img src={data.image} />
+          </div>
+          <div>
+            <h5>{data.title}</h5>
+            <div>{data.description}</div>
+          </div>
+        </div>
         <div>
           {data.tags &&
             data.tags.map((item) => {
@@ -34,6 +40,16 @@ function SocialShare() {
     image: '',
     tags: ['posts', 'description'],
   };
+  const [formData, setFormData] = useState([]);
+  useEffect(() => {
+    setFormData({
+      title: title,
+      description: description,
+      image: image,
+      tags: tags,
+    });
+  });
+
   return (
     <div className="social">
       <div className="social-form">
@@ -42,25 +58,27 @@ function SocialShare() {
           <div>
             <div>Title</div>
             <div>
-              <input type="" />
+              <input type="text" onChange={(e) => SetTitle(e.target.value)} />
             </div>
           </div>
           <div>
             <div>Description</div>
             <div>
-              <input type="" />
+              <input type="" onChange={(e) => SetDescription(e.target.value)} />
             </div>
           </div>
           <div>
-            <div>Image</div>
             <div>
-              <input type="" />
+              Media <span> or Choose from Library</span>
+            </div>
+            <div>
+              <input type="file" onChange={(e) => SetImage(e.target.value)} />
             </div>
           </div>
           <div>
             <div>Tags</div>
             <div>
-              <input type="" />
+              <input type="text" onChange={(e) => SetTags(e.target.value)} />
             </div>
           </div>
           <div className="button-footer">
@@ -72,7 +90,7 @@ function SocialShare() {
       </div>
       <div className="social-preview">
         <h3>Preview</h3>
-        <PostCard data={data} />
+        <PostCard data={formData} />
       </div>
     </div>
   );

@@ -7,12 +7,12 @@ export default function App() {
   return (
     <div>
       <Router>
-        <Header />
-        <Banner />
+        {/* <Header /> */}
+        {/* <Banner /> */}
         <Routes>
-          <Route path={`/learning`} element={<SocialShare />}></Route>
+          <Route path={`/`} element={<SocialShare />}></Route>
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
       </Router>
     </div>
   );
