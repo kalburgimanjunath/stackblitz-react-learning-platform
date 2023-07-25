@@ -90,5 +90,13 @@ body {
 }
 .lesson-title {
   font-weight: bold;
+  text-transform: capitalize;
   font-size: 14px;
+}
+.lesson-content {
+  text-transform: capitalize;
+  font-size: 14px;
+}
+.active {
+  text-decoration: underline;
 }

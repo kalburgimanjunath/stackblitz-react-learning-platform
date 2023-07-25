@@ -1,12 +1,20 @@
 import React, { useState } from 'react';
 import { LESSONS } from './lessons';
-const Header = () => {
+const Header = ({ breadcrum, activeItem }) => {
   return (
     <div style={{ display: 'flex', justifyContent: 'space-between' }}>
       <ul>
         <li>Home</li>
-        <li>Lesson</li>
-        <li>Lesson</li>
+        {/* <li>Lesson</li>
+        <li>Lesson</li> */}
+        {breadcrum &&
+          breadcrum.map((item) => {
+            return (
+              <li className={activeItem == item.title ? 'active' : ''}>
+                {item.title}
+              </li>
+            );
+          })}
       </ul>
       <ul>
         <li>Hide Solution</li>
@@ -33,7 +41,7 @@ const Preview = () => {
 };
 const Lessons = ({ content }) => {
   return (
-    <div>
+    <div className="p-20">
       <div className="lesson-title">{content.title}</div>
       <div className="lesson-content">{content.content}</div>
       <div className="lesson-solution">{content.solution}</div>
@@ -44,7 +52,7 @@ export default function Platform() {
   const [currentLesson, setCurrentLesson] = useState(0);
   return (
     <div className="platform">
-      <Header />
+      <Header breadcrum={LESSONS} activeItem={LESSONS[currentLesson].title} />
       <div className="flex w-full v-full">
         <div className="w-half border-right ">
           <Lessons content={LESSONS[currentLesson]} />
