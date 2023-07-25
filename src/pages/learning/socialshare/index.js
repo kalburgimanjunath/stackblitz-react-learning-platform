@@ -104,7 +104,9 @@ function SocialShare() {
           </div>
           <div className="button-footer">
             <div>
-              <button type="button">Save</button>
+              <button type="button" className="primary">
+                Save
+              </button>
             </div>
           </div>
         </div>
