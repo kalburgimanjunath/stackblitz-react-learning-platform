@@ -1,4 +1,5 @@
 import React from 'react';
+import { LESSONS } from './lessons';
 const Header = () => {
   return (
     <div style={{ display: 'flex', justifyContent: 'space-between' }}>
@@ -30,15 +31,24 @@ const Preview = () => {
     </div>
   );
 };
+const Lessons = ({ content }) => {
+  return (
+    <div>
+      <div className="lesson-title">{content.title}</div>
+      <div className="lesson-content">{content.content}</div>
+    </div>
+  );
+};
 export default function Platform() {
   return (
     <div className="platform">
       <Header />
       <div className="flex w-full v-full">
         <div className="w-half border-right ">
-          <h1>Lesson</h1>
+          <Lessons content={LESSONS[0]} />
           <div className="footer flex">
             <button type="button">Previous Lesson</button>
+
             <button type="button">Next Lesson</button>
           </div>
         </div>
