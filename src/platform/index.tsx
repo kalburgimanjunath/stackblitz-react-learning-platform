@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { LESSONS } from './lessons';
 const Header = () => {
   return (
@@ -36,20 +36,39 @@ const Lessons = ({ content }) => {
     <div>
       <div className="lesson-title">{content.title}</div>
       <div className="lesson-content">{content.content}</div>
+      <div className="lesson-solution">{content.solution}</div>
     </div>
   );
 };
 export default function Platform() {
+  const [currentLesson, setCurrentLesson] = useState(0);
   return (
     <div className="platform">
       <Header />
       <div className="flex w-full v-full">
         <div className="w-half border-right ">
-          <Lessons content={LESSONS[0]} />
+          <Lessons content={LESSONS[currentLesson]} />
           <div className="footer flex">
-            <button type="button">Previous Lesson</button>
+            {currentLesson > 0 ? (
+              <button
+                type="button"
+                onClick={() => setCurrentLesson(currentLesson - 1)}
+              >
+                Previous Lesson
+              </button>
+            ) : null}
 
-            <button type="button">Next Lesson</button>
+            <span>
+              {currentLesson}/{LESSONS.length}
+            </span>
+            {currentLesson < LESSONS.length - 1 ? (
+              <button
+                type="button"
+                onClick={() => setCurrentLesson(currentLesson + 1)}
+              >
+                Next Lesson
+              </button>
+            ) : null}
           </div>
         </div>
         <div className="w-half">
