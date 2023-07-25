@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { LESSONS } from './lessons';
+import { LESSONS } from '../data/lessons';
 const Header = ({ breadcrum, activeItem }) => {
   return (
     <div style={{ display: 'flex', justifyContent: 'space-between' }}>
