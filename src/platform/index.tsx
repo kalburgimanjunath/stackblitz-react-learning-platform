@@ -16,10 +16,36 @@ const Header = () => {
     </div>
   );
 };
+const Preview = () => {
+  return (
+    <div className="w-full m-20 p-20 border shadow">
+      <header className="flex">
+        <div className="flex space-around text-center">
+          <span>X</span>
+          <span>M</span>
+          <span>R</span>
+        </div>
+        <div>Preview</div>
+      </header>
+    </div>
+  );
+};
 export default function Platform() {
   return (
     <div className="platform">
       <Header />
+      <div className="flex w-full v-full">
+        <div className="w-half border-right ">
+          <h1>Lesson</h1>
+          <div className="footer flex">
+            <button type="button">Previous Lesson</button>
+            <button type="button">Next Lesson</button>
+          </div>
+        </div>
+        <div className="w-half">
+          <Preview />
+        </div>
+      </div>
     </div>
   );
 }
