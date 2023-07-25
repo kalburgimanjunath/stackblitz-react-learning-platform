@@ -50,6 +50,7 @@ const Lessons = ({ content }) => {
 };
 export default function Platform() {
   const [currentLesson, setCurrentLesson] = useState(0);
+
   return (
     <div className="platform">
       <Header breadcrum={LESSONS} activeItem={LESSONS[currentLesson].title} />
