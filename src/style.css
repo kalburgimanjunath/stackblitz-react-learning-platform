@@ -35,3 +35,17 @@ body {
 .p-20 {
   padding: 20px;
 }
+.platform {
+}
+.platform ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+}
+.platform ul li {
+  padding: 5px 5px;
+}
+.platform ul li:hover {
+  cursor: pointer;
+  background-color: #d0d0d0;
+}
