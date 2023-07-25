@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { LESSONS } from '../data/lessons';
 const Header = ({ breadcrum, activeItem, showSolution }) => {
   return (
-    <div className="flex bg-pink-200 text-blue-500 cursor-pointer p-2 space-between">
+    <div className="flex bg-pink-200 text-blue-500 cursor-pointer p-2 justify-between">
       <ul>
         <li>Home</li>
         {/* <li>Lesson</li>
@@ -17,13 +17,7 @@ const Header = ({ breadcrum, activeItem, showSolution }) => {
           })}
       </ul>
       <ul>
-        <li
-          onClick={() => {
-            showSolution(true);
-          }}
-        >
-          Hide Solution
-        </li>
+        <li onClick={showSolution(true)}>Hide Solution</li>
         <li>Hide Preview</li>
         <li>Slides</li>
         <li>Feedback</li>
@@ -62,7 +56,7 @@ export default function Platform() {
       <Header
         breadcrum={LESSONS}
         activeItem={LESSONS[currentLesson].title}
-        showSolution={setShowSolution}
+        
       />
       <div className="grid grid-cols-2 gap-4">
         <div className="border-2 min-h-screen">
