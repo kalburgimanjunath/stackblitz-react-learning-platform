@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { LESSONS } from '../data/lessons';
-const Header = ({ breadcrum, activeItem }) => {
+const Header = ({ breadcrum, activeItem, showSolution }) => {
   return (
-    <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+    <div className="flex bg-pink-200 text-blue-500 cursor-pointer p-2 space-between">
       <ul>
         <li>Home</li>
         {/* <li>Lesson</li>
@@ -17,7 +17,13 @@ const Header = ({ breadcrum, activeItem }) => {
           })}
       </ul>
       <ul>
-        <li>Hide Solution</li>
+        <li
+          onClick={() => {
+            showSolution(true);
+          }}
+        >
+          Hide Solution
+        </li>
         <li>Hide Preview</li>
         <li>Slides</li>
         <li>Feedback</li>
@@ -27,7 +33,7 @@ const Header = ({ breadcrum, activeItem }) => {
 };
 const Preview = () => {
   return (
-    <div className="w-full m-20 p-20 border shadow">
+    <div className="m-1">
       <header className="flex">
         <div className="flex space-around text-center">
           <span>X</span>
@@ -41,7 +47,7 @@ const Preview = () => {
 };
 const Lessons = ({ content }) => {
   return (
-    <div className="p-20">
+    <div className="p-3 min-h-screen">
       <div className="lesson-title">{content.title}</div>
       <div className="lesson-content">{content.content}</div>
       <div className="lesson-solution">{content.solution}</div>
@@ -50,17 +56,22 @@ const Lessons = ({ content }) => {
 };
 export default function Platform() {
   const [currentLesson, setCurrentLesson] = useState(0);
-
+  const [showSolution, setShowSolution] = useState(false);
   return (
     <div className="platform">
-      <Header breadcrum={LESSONS} activeItem={LESSONS[currentLesson].title} />
-      <div className="flex w-full v-full">
-        <div className="w-half border-right ">
+      <Header
+        breadcrum={LESSONS}
+        activeItem={LESSONS[currentLesson].title}
+        showSolution={setShowSolution}
+      />
+      <div className="grid grid-cols-2 gap-4">
+        <div className="border-2 min-h-screen">
           <Lessons content={LESSONS[currentLesson]} />
-          <div className="footer flex">
+          <div className="footer flex bg-gray-300 text-center w-full pl-3 p-2 fixed">
             {currentLesson > 0 ? (
               <button
                 type="button"
+                className="primary"
                 onClick={() => setCurrentLesson(currentLesson - 1)}
               >
                 Previous Lesson
@@ -73,6 +84,7 @@ export default function Platform() {
             {currentLesson < LESSONS.length - 1 ? (
               <button
                 type="button"
+                className="primary"
                 onClick={() => setCurrentLesson(currentLesson + 1)}
               >
                 Next Lesson
@@ -80,7 +92,7 @@ export default function Platform() {
             ) : null}
           </div>
         </div>
-        <div className="w-half">
+        <div className="p-2">
           <Preview />
         </div>
       </div>
