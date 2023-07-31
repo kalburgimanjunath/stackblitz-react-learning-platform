@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { LESSONS } from '../data/lessons';
+
 const Header = ({ breadcrum, activeItem, showSolution, showPreview }) => {
   const [showS, setS] = useState(false);
   const [showP, setP] = useState(false);
@@ -13,6 +14,16 @@ const Header = ({ breadcrum, activeItem, showSolution, showPreview }) => {
   }
   return (
     <div className="flex bg-pink-200 text-blue-500 cursor-pointer p-2 justify-between">
+      <div>
+        {breadcrum &&
+          breadcrum.map((item) => {
+            return (
+              <li className={activeItem == item.title ? 'active' : ''}>
+                {item.title}
+              </li>
+            );
+          })}
+      </div>
       <ul>
         <li>Home</li>
         {/* <li>Lesson</li>
@@ -63,9 +74,13 @@ const Lessons = ({ content, showSolution }) => {
   return (
     <div className="p-3 min-h-screen">
       <div className="lesson-title">{content.title}</div>
-      <div className="lesson-content">{content.content}</div>
+      <div className="lesson-content text-ellipsis overflow-hidden">
+        <pre className="text-ellipsis ">{content.content}</pre>
+      </div>
       {showSolution ? (
-        <div className="lesson-solution">{content.solution}</div>
+        <div className="lesson-solution text-ellipsis  mt-1">
+          <pre className="text-ellipsis">{content.solution}</pre>
+        </div>
       ) : (
         ''
       )}
