@@ -1,7 +1,13 @@
 import React, { useState } from 'react';
 import { LESSONS } from '../data/lessons';
 import { SideOverlays } from '../components/index';
-const Header = ({ breadcrum, activeItem, showSolution, showPreview }) => {
+const Header = ({
+  breadcrum,
+  activeItem,
+  showSolution,
+  showPreview,
+  CurrentLesson,
+}) => {
   const [showS, setS] = useState(false);
   const [showP, setP] = useState(false);
   function showSolutionC() {
@@ -34,6 +40,7 @@ const Header = ({ breadcrum, activeItem, showSolution, showPreview }) => {
                         return (
                           <li
                             className={activeItem == item.title ? 'active' : ''}
+                            onClick={() => CurrentLesson(item.id - 1)}
                           >
                             {item.title}
                           </li>
@@ -114,6 +121,7 @@ export default function Platform() {
   const [currentLesson, setCurrentLesson] = useState(0);
   const [showSolution, setShowSolution] = useState(true);
   const [showPreview, setShowPreview] = useState(true);
+
   return (
     <div className="platform">
       <Header
@@ -124,6 +132,10 @@ export default function Platform() {
         }}
         showPreview={(show) => {
           setShowPreview(show);
+        }}
+        CurrentLesson={(lesson) => {
+          console.log(lesson);
+          setCurrentLesson(lesson);
         }}
       />
       <div
