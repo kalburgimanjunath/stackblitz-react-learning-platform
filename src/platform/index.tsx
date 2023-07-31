@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { LESSONS } from '../data/lessons';
-
+import { SideOverlays } from '../components/index';
 const Header = ({ breadcrum, activeItem, showSolution, showPreview }) => {
   const [showS, setS] = useState(false);
   const [showP, setP] = useState(false);
@@ -24,6 +24,7 @@ const Header = ({ breadcrum, activeItem, showSolution, showPreview }) => {
             );
           })}
       </div>
+      <SideOverlays />
       <ul>
         <li>Home</li>
         {/* <li>Lesson</li>
