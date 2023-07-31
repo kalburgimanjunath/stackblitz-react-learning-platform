@@ -1,6 +1,16 @@
 import React, { useState } from 'react';
 import { LESSONS } from '../data/lessons';
-const Header = ({ breadcrum, activeItem, showSolution }) => {
+const Header = ({ breadcrum, activeItem, showSolution, showPreview }) => {
+  const [showS, setS] = useState(false);
+  const [showP, setP] = useState(false);
+  function showSolutionC() {
+    showSolution(!showS);
+    setS(!showS);
+  }
+  function showPreviewC() {
+    showPreview(!showP);
+    setP(!showP);
+  }
   return (
     <div className="flex bg-pink-200 text-blue-500 cursor-pointer p-2 justify-between">
       <ul>
@@ -17,8 +27,18 @@ const Header = ({ breadcrum, activeItem, showSolution }) => {
           })}
       </ul>
       <ul>
-        <li onClick={showSolution(true)}>Hide Solution</li>
-        <li>Hide Preview</li>
+        <li
+          onClick={() => showSolutionC()}
+          style={{ display: showS ? 'block' : '' }}
+        >
+          {showS ? 'Hide' : 'Show'} Solution
+        </li>
+        <li
+          onClick={() => showPreviewC()}
+          style={{ display: showP ? 'block' : '' }}
+        >
+          {showP ? 'Hide' : 'Show'} Preview
+        </li>
         <li>Slides</li>
         <li>Feedback</li>
       </ul>
@@ -39,28 +59,45 @@ const Preview = () => {
     </div>
   );
 };
-const Lessons = ({ content }) => {
+const Lessons = ({ content, showSolution }) => {
   return (
     <div className="p-3 min-h-screen">
       <div className="lesson-title">{content.title}</div>
       <div className="lesson-content">{content.content}</div>
-      <div className="lesson-solution">{content.solution}</div>
+      {showSolution ? (
+        <div className="lesson-solution">{content.solution}</div>
+      ) : (
+        ''
+      )}
     </div>
   );
 };
 export default function Platform() {
   const [currentLesson, setCurrentLesson] = useState(0);
-  const [showSolution, setShowSolution] = useState(false);
+  const [showSolution, setShowSolution] = useState(true);
+  const [showPreview, setShowPreview] = useState(true);
   return (
     <div className="platform">
       <Header
         breadcrum={LESSONS}
         activeItem={LESSONS[currentLesson].title}
-        
+        showSolution={(show) => {
+          setShowSolution(show);
+        }}
+        showPreview={(show) => {
+          setShowPreview(show);
+        }}
       />
-      <div className="grid grid-cols-2 gap-4">
+      <div
+        className={
+          showPreview ? 'grid grid-cols-2 gap-4' : 'grid grid-cols-1 gap-4'
+        }
+      >
         <div className="border-2 min-h-screen">
-          <Lessons content={LESSONS[currentLesson]} />
+          <Lessons
+            content={LESSONS[currentLesson]}
+            showSolution={showSolution}
+          />
           <div className="footer flex bg-gray-300 text-center w-full pl-3 p-2 fixed">
             {currentLesson > 0 ? (
               <button
@@ -86,9 +123,7 @@ export default function Platform() {
             ) : null}
           </div>
         </div>
-        <div className="p-2">
-          <Preview />
-        </div>
+        <div className="p-2">{showPreview ? <Preview /> : ''}</div>
       </div>
     </div>
   );
