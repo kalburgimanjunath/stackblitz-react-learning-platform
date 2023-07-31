@@ -103,7 +103,9 @@ const Preview = () => {
 const Lessons = ({ content, showSolution }) => {
   return (
     <div className="p-3 min-h-screen">
-      <div className="lesson-title">{content.title}</div>
+      <div className="lesson-title">
+        {content.id}.{content.title}
+      </div>
       <div className="lesson-content text-ellipsis overflow-hidden">
         <pre className="text-ellipsis ">{content.content}</pre>
       </div>

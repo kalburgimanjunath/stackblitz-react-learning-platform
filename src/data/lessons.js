@@ -190,7 +190,7 @@ export const LESSONS = [
     preview: true,
   },
   {
-    id: 10,
+    id: 9,
     title: 'JavaScript Data Structures - Queue',
     content: `A queue is a linear data structure that behaves like a real-world queue. It follows a first in, first out (FIFO) order of operations, similar to its real-world counterpart. This means that new items are added to the end of the queue, whereas items are removed from the start of the queue.
 
@@ -249,7 +249,7 @@ export const LESSONS = [
     preview: true,
   },
   {
-    id: 11,
+    id: 10,
     title: 'JavaScript Data Structures - Stack',
     content: `A stack is a linear data structure that behaves like a real-world stack of items. It follows a last in, first out (LIFO) order of operations, similar to its real-world counterpart. This means that new items are added to the top of the stack and items are removed from the top of the stack as well.
 
@@ -306,7 +306,7 @@ export const LESSONS = [
     preview: true,
   },
   {
-    id: 12,
+    id: 11,
     title: 'JavaScript Data Structures - Linked List',
     content: `A linked list is a linear data structure that represents a collection of elements, where each element points to the next one. The first element in the linked list is the head and the last element is the tail.
 
@@ -429,7 +429,7 @@ export const LESSONS = [
     preview: true,
   },
   {
-    id: 13,
+    id: 12,
     title: 'JavaScript Data Structures - Doubly Linked List',
     content: `A doubly linked list is a linear data structure that represents a collection of elements, where each element points both to the next and the previous one. The first element in the doubly linked list is the head and the last element is the tail.
 
@@ -558,7 +558,7 @@ export const LESSONS = [
     preview: true,
   },
   {
-    id: 14,
+    id: 13,
     title: 'JavaScript Data Structures - Binary Tree',
     content: `A binary tree is a data structure consisting of a set of linked nodes that represent a hierarchical tree structure. Each node is linked to others via parent-children relationship. Any given node can have at most two children (left and right). The first node in the binary tree is the root, whereas nodes without any children are the leaves.
 
@@ -704,7 +704,7 @@ export const LESSONS = [
     preview: true,
   },
   {
-    id: 15,
+    id: 14,
     title: 'JavaScript Data Structures - Binary Search Tree',
     content: `A binary search tree is a data structure consisting of a set of ordered linked nodes that represent a hierarchical tree structure. Each node is linked to others via parent-children relationship. Any given node can have at most two children (left and right). The first node in the binary search tree is the root, whereas nodes without any children are the leaves. The binary search tree is organized in such a way that for any given node, all nodes in its left subtree have a key less than itself and all nodes in its right subtree have a key greater than itself.
 
@@ -904,7 +904,7 @@ export const LESSONS = [
     preview: true,
   },
   {
-    id: 16,
+    id: 15,
     title: `JavaScript Data Structures - Tree`,
     content: `A tree is a data structure consisting of a set of linked nodes that represent a hierarchical tree structure. Each node is linked to others via parent-children relationship. The first node in the tree is the root, whereas nodes without any children are the leaves.
 
@@ -1024,7 +1024,7 @@ export const LESSONS = [
     preview: true,
   },
   {
-    id: 17,
+    id: 16,
     title: 'JavaScript Data Structures - Graph',
     content: `A graph is a data structure consisting of a set of nodes or vertices and a set of edges that represent connections between those nodes. Graphs can be directed or undirected, while their edges can be assigned numeric weights.
 
