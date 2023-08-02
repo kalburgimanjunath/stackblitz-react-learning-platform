@@ -10,6 +10,7 @@ const Header = ({
 }) => {
   const [showS, setS] = useState(false);
   const [showP, setP] = useState(false);
+  const [closeBtn, setClose] = useState(false);
   function showSolutionC() {
     showSolution(!showS);
     setS(!showS);
@@ -24,7 +25,28 @@ const Header = ({
         <div className="absolute inset-0 overflow-hidden">
           <div className="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
             <div className="pointer-events-auto relative w-screen max-w-md">
-              <div className="flex h-full flex-col overflow-y-scroll bg-white py-6 shadow-xl">
+              <span
+                className={!closeBtn ? 'hidden' : 'fixed right-2 top-5'}
+                onClick={() => setClose(!closeBtn)}
+              >
+                Open
+              </span>
+              <div
+                className={
+                  closeBtn
+                    ? 'hidden'
+                    : 'flex h-full flex-col overflow-y-scroll bg-white py-6 shadow-xl'
+                }
+              >
+                <span
+                  className={
+                    closeBtn ? 'fixed right-2 hidden' : 'fixed right-2'
+                  }
+                  onClick={() => setClose(!closeBtn)}
+                >
+                  Close
+                </span>
+
                 <div className="px-4 sm:px-6">
                   <h2
                     className="text-base font-semibold leading-6 text-gray-900"
@@ -100,12 +122,28 @@ const Preview = () => {
     </div>
   );
 };
+const SlideShow = ({ url }) => {
+  return (
+    <div className="fixed right-0 bottom-1 z-10 ">
+      <iframe
+        src={url}
+        frameBorder="0"
+        width="480"
+        height="299"
+        // allowFullScreen="true"
+        // allowFullScreen={'true'}
+        // webkitallowfullscreen="true"
+      ></iframe>
+    </div>
+  );
+};
 const Lessons = ({ content, showSolution }) => {
   return (
     <div className="p-3 min-h-screen">
       <div className="lesson-title">
         {content.id}.{content.title}
       </div>
+
       <div className="lesson-content text-ellipsis overflow-hidden">
         <pre className="text-ellipsis ">{content.content}</pre>
       </div>
@@ -116,6 +154,7 @@ const Lessons = ({ content, showSolution }) => {
       ) : (
         ''
       )}
+      <SlideShow url={content.url} />
     </div>
   );
 };

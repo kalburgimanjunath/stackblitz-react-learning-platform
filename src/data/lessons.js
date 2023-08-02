@@ -1,6 +1,7 @@
 export const LESSONS = [
   {
     id: 1,
+    url: 'https://docs.google.com/presentation/d/e/2PACX-1vTcLKXXrVZeRKC0DRVyJG2wBAEFEIw84xwiS1DfnFT0tnukstnihT2V6tAWeK9AsZsmR1SdmWxG0cC6/embed?start=false&loop=false&delayms=3000',
     title: 'What is an Algorithm? ',
     content: `In computer programming terms, an algorithm is a set of well-defined instructions to solve a particular problem. It takes a set of input(s) and produces the desired output. For example,
 
@@ -35,6 +36,7 @@ export const LESSONS = [
   },
   {
     id: 2,
+    url: 'https://docs.google.com/presentation/d/e/2PACX-1vTcLKXXrVZeRKC0DRVyJG2wBAEFEIw84xwiS1DfnFT0tnukstnihT2V6tAWeK9AsZsmR1SdmWxG0cC6/embed?start=false&loop=false&delayms=3000',
     title: 'Find the largest number among three numbers ',
     content: 'comming soon',
     solution: `Step 1: Start
@@ -55,6 +57,7 @@ export const LESSONS = [
   },
   {
     id: 3,
+    url: 'https://docs.google.com/presentation/d/e/2PACX-1vTcLKXXrVZeRKC0DRVyJG2wBAEFEIw84xwiS1DfnFT0tnukstnihT2V6tAWeK9AsZsmR1SdmWxG0cC6/embed?start=false&loop=false&delayms=3000',
     title: 'Find Roots of a Quadratic Equation ax2 + bx + c = 0 ',
     content: 'lesson 3 content',
     solution: `Step 1: Start
@@ -75,6 +78,7 @@ export const LESSONS = [
   },
   {
     id: 4,
+    url: 'https://docs.google.com/presentation/d/e/2PACX-1vTcLKXXrVZeRKC0DRVyJG2wBAEFEIw84xwiS1DfnFT0tnukstnihT2V6tAWeK9AsZsmR1SdmWxG0cC6/embed?start=false&loop=false&delayms=3000',
     title: ' Find the factorial of a number',
     content: 'comming soon',
     solution: `Step 1: Start
@@ -92,6 +96,7 @@ export const LESSONS = [
   },
   {
     id: 5,
+    url: 'https://docs.google.com/presentation/d/e/2PACX-1vTcLKXXrVZeRKC0DRVyJG2wBAEFEIw84xwiS1DfnFT0tnukstnihT2V6tAWeK9AsZsmR1SdmWxG0cC6/embed?start=false&loop=false&delayms=3000',
     title: 'Check whether a number is prime or not',
     content: 'coming soon',
     solution: `Step 1: Start
@@ -114,6 +119,7 @@ export const LESSONS = [
   },
   {
     id: 6,
+    url: 'https://docs.google.com/presentation/d/e/2PACX-1vTcLKXXrVZeRKC0DRVyJG2wBAEFEIw84xwiS1DfnFT0tnukstnihT2V6tAWeK9AsZsmR1SdmWxG0cC6/embed?start=false&loop=false&delayms=3000',
     title: 'Arrays ',
     content: `An array is a linear data structure that represents a collection of elements. In JavaScript, arrays don't have a fixed size, while their contents can be of any valid type, even arrays themselves. Arrays are probably the most commonly used data structure and come with a plethora of methods that allow easy manipulation and transformation of their contents.`,
     solution: `
@@ -140,6 +146,7 @@ export const LESSONS = [
   },
   {
     id: 7,
+    url: 'https://docs.google.com/presentation/d/e/2PACX-1vTcLKXXrVZeRKC0DRVyJG2wBAEFEIw84xwiS1DfnFT0tnukstnihT2V6tAWeK9AsZsmR1SdmWxG0cC6/embed?start=false&loop=false&delayms=3000',
     title: 'Sets',
     content: `A set is a linear data structure that represents an ordered collection of unique values. Sets in JavaScript can store any valid type of value, however each value can only occur once based on value equality checking.`,
     solution: `
@@ -164,6 +171,7 @@ export const LESSONS = [
   },
   {
     id: 8,
+    url: 'https://docs.google.com/presentation/d/e/2PACX-1vTcLKXXrVZeRKC0DRVyJG2wBAEFEIw84xwiS1DfnFT0tnukstnihT2V6tAWeK9AsZsmR1SdmWxG0cC6/embed?start=false&loop=false&delayms=3000',
     title: 'Maps',
     content: `A map is an associative data structure that represents a keyed collection of elements. Each key in a JavaScript Map has to be unique and either a primitive value or an object, whereas the values of the map can be of any valid type.`,
     solution: `
@@ -191,6 +199,7 @@ export const LESSONS = [
   },
   {
     id: 9,
+    url: 'https://docs.google.com/presentation/d/e/2PACX-1vTcLKXXrVZeRKC0DRVyJG2wBAEFEIw84xwiS1DfnFT0tnukstnihT2V6tAWeK9AsZsmR1SdmWxG0cC6/embed?start=false&loop=false&delayms=3000',
     title: 'JavaScript Data Structures - Queue',
     content: `A queue is a linear data structure that behaves like a real-world queue. It follows a first in, first out (FIFO) order of operations, similar to its real-world counterpart. This means that new items are added to the end of the queue, whereas items are removed from the start of the queue.
 
@@ -250,6 +259,7 @@ export const LESSONS = [
   },
   {
     id: 10,
+    url: 'https://docs.google.com/presentation/d/e/2PACX-1vTcLKXXrVZeRKC0DRVyJG2wBAEFEIw84xwiS1DfnFT0tnukstnihT2V6tAWeK9AsZsmR1SdmWxG0cC6/embed?start=false&loop=false&delayms=3000',
     title: 'JavaScript Data Structures - Stack',
     content: `A stack is a linear data structure that behaves like a real-world stack of items. It follows a last in, first out (LIFO) order of operations, similar to its real-world counterpart. This means that new items are added to the top of the stack and items are removed from the top of the stack as well.
 
@@ -307,6 +317,7 @@ export const LESSONS = [
   },
   {
     id: 11,
+    url: 'https://docs.google.com/presentation/d/e/2PACX-1vTcLKXXrVZeRKC0DRVyJG2wBAEFEIw84xwiS1DfnFT0tnukstnihT2V6tAWeK9AsZsmR1SdmWxG0cC6/embed?start=false&loop=false&delayms=3000',
     title: 'JavaScript Data Structures - Linked List',
     content: `A linked list is a linear data structure that represents a collection of elements, where each element points to the next one. The first element in the linked list is the head and the last element is the tail.
 
@@ -430,6 +441,7 @@ export const LESSONS = [
   },
   {
     id: 12,
+    url: 'https://docs.google.com/presentation/d/e/2PACX-1vTcLKXXrVZeRKC0DRVyJG2wBAEFEIw84xwiS1DfnFT0tnukstnihT2V6tAWeK9AsZsmR1SdmWxG0cC6/embed?start=false&loop=false&delayms=3000',
     title: 'JavaScript Data Structures - Doubly Linked List',
     content: `A doubly linked list is a linear data structure that represents a collection of elements, where each element points both to the next and the previous one. The first element in the doubly linked list is the head and the last element is the tail.
 
@@ -559,6 +571,7 @@ export const LESSONS = [
   },
   {
     id: 13,
+    url: 'https://docs.google.com/presentation/d/e/2PACX-1vTcLKXXrVZeRKC0DRVyJG2wBAEFEIw84xwiS1DfnFT0tnukstnihT2V6tAWeK9AsZsmR1SdmWxG0cC6/embed?start=false&loop=false&delayms=3000',
     title: 'JavaScript Data Structures - Binary Tree',
     content: `A binary tree is a data structure consisting of a set of linked nodes that represent a hierarchical tree structure. Each node is linked to others via parent-children relationship. Any given node can have at most two children (left and right). The first node in the binary tree is the root, whereas nodes without any children are the leaves.
 
@@ -705,6 +718,7 @@ export const LESSONS = [
   },
   {
     id: 14,
+    url: 'https://docs.google.com/presentation/d/e/2PACX-1vTcLKXXrVZeRKC0DRVyJG2wBAEFEIw84xwiS1DfnFT0tnukstnihT2V6tAWeK9AsZsmR1SdmWxG0cC6/embed?start=false&loop=false&delayms=3000',
     title: 'JavaScript Data Structures - Binary Search Tree',
     content: `A binary search tree is a data structure consisting of a set of ordered linked nodes that represent a hierarchical tree structure. Each node is linked to others via parent-children relationship. Any given node can have at most two children (left and right). The first node in the binary search tree is the root, whereas nodes without any children are the leaves. The binary search tree is organized in such a way that for any given node, all nodes in its left subtree have a key less than itself and all nodes in its right subtree have a key greater than itself.
 
@@ -905,6 +919,7 @@ export const LESSONS = [
   },
   {
     id: 15,
+    url: 'https://docs.google.com/presentation/d/e/2PACX-1vTcLKXXrVZeRKC0DRVyJG2wBAEFEIw84xwiS1DfnFT0tnukstnihT2V6tAWeK9AsZsmR1SdmWxG0cC6/embed?start=false&loop=false&delayms=3000',
     title: `JavaScript Data Structures - Tree`,
     content: `A tree is a data structure consisting of a set of linked nodes that represent a hierarchical tree structure. Each node is linked to others via parent-children relationship. The first node in the tree is the root, whereas nodes without any children are the leaves.
 
@@ -1025,6 +1040,7 @@ export const LESSONS = [
   },
   {
     id: 16,
+    url: 'https://docs.google.com/presentation/d/e/2PACX-1vTcLKXXrVZeRKC0DRVyJG2wBAEFEIw84xwiS1DfnFT0tnukstnihT2V6tAWeK9AsZsmR1SdmWxG0cC6/embed?start=false&loop=false&delayms=3000',
     title: 'JavaScript Data Structures - Graph',
     content: `A graph is a data structure consisting of a set of nodes or vertices and a set of edges that represent connections between those nodes. Graphs can be directed or undirected, while their edges can be assigned numeric weights.
 
@@ -1185,6 +1201,7 @@ export const LESSONS = [
   },
   // {
   //   id: 3,
+  //   url:'https://docs.google.com/presentation/d/e/2PACX-1vTcLKXXrVZeRKC0DRVyJG2wBAEFEIw84xwiS1DfnFT0tnukstnihT2V6tAWeK9AsZsmR1SdmWxG0cC6/embed?start=false&loop=false&delayms=3000',
   //   title: 'lesson 3 ',
   //   content: 'lesson 3 content',
   //   solution: 'lesson 3 solution',
